@@ -1,0 +1,28 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Address1</th>
+        <th>Age</th>
+        <th>Mobile</th>
+        <th>EmailId</th>
+        <th>PinCode</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let employee of employeeList">
+      <tr>
+        <td>{{employee.id}}</td>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.address1}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.mobile}}</td>
+        <td>{{employee.emailId}}</td>
+        <td>{{employee.pinCode}}</td>
+        <td> <input type="button" class="btn  btn-danger" value="Edit" (click)="editemployee(employee)"> </td>
+      </tr>
+    </tbody>
+  </table>

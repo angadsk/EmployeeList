@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+      <label class="col-md-2">ID:  {{employee.id}}</label>
+  </div>
+  <div class="row" >
+    <label class="col-md-2">FirstName</label>
+    <div class="col-md-3">
+      <input type="text" class="form-control" id="fname" name="fname" [(ngModel)]="employee.firstName">
+    </div>
+    <label class="col-md-2">LastName</label>
+    <div class="col-md-3">
+      <input type="text" class="form-control" id="lname" name="lname" [(ngModel)]="employee.lastName">
+    </div>
+  </div>
+  <div class="row" style="margin-top: 1%">
+    <label class="col-md-2">Address1</label>
+    <div class="col-md-3">
+      <input class="form-control" type="text" id="address1" name="address1" [(ngModel)]="employee.address1">
+    </div>
+    <label class="col-md-2">Age</label>
+    <div class="col-md-3">
+      <input class="form-control" type="text" id="address1" name="address2" [(ngModel)]="employee.age">
+    </div>
+  </div>
+  <div class="row" style="margin-top: 1%">
+    <label class="col-md-2">Mobile</label>
+    <div class="col-md-3">
+      <input class="form-control" type="text" id="mobile" name="mobile" [(ngModel)]="employee.mobile">
+    </div>
+
+    <label class="col-md-2">PinCode</label>
+    <div class="col-md-3">
+      <input class="form-control" type="text" id="pincode" name="pincode" [(ngModel)]="employee.pinCode">
+    </div>
+  </div>
+  <div class="row" style="margin-top: 1%">
+    <label class="col-md-2">EmailId</label>
+    <div class="col-md-3">
+      <input class="form-control" type="text" id="emailId" name="emailId" [(ngModel)]="employee.emailId">
+    </div>
+  </div>
+  <div class="row" style="margin: 1%">
+    <button name="saveandUpdate" class="btn btn-success" style="margin-right: 1%" (click)="addEditEmployee()">{{(employee.id === 0) ? 'Save' : 'Update'}}</button>    
+    <input type="button"  class="btn  btn-dark" value="Clear" (click)="clearScreen()">
+  </div>
+
+ <app-employee-grid (employeeModel)="editemployee($event)"></app-employee-grid>
+</div>
